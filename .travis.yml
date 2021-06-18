@@ -1,5 +1,11 @@
 os: linux
 arch:
-  - amd64
+#   - amd64
   - ppc64le
 language: clojure
+before_install:
+  - sudo apt update
+  - sudo wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+  - sudo chmod a+x lein
+  - sudo cp lein ~/bin/lein
+  - lein
